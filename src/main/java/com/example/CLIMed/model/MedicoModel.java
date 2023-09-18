@@ -1,12 +1,15 @@
 package com.example.CLIMed.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 
 @Entity
+@Table(name = "TB_Medico")
 public class MedicoModel {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String nome;
     private String email;
